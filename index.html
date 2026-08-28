@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Telescópios e Satélites</title>
+  
+  <!-- Importação da fonte Abril Fatface via Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <style>
+    /* Estilos Gerais */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #e7c9f1;
+      color: #333333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 20px;
+    }
+
+    /* Seção individual */
+    .section {
+      width: 100%;
+      max-width: 1200px;
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    /* Efeito principal: Texto mascarado com imagem */
+    .title-mask {
+      /* Fonte Abril Fatface e tamanho substancialmente aumentado */
+      font-family: 'Abril Fatface', serif;
+      font-size: clamp(6rem, 22vw, 17rem);
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      line-height: 0.95;
+
+      /* Configuração da Imagem de Fundo recortada pelo texto */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+
+      margin-bottom: 25px;
+    }
+
+    /* Imagens específicas para cada título */
+    .sputnik {
+      background-image: url('sputnik.jpg');
+    }
+
+    .hubble {
+      background-image: url('hubble.jpg');
+    }
+
+    .james-webb {
+      background-image: url('james-webb.jpg');
+    }
+
+    .vera-rubin {
+      background-image: url('vera-rubin.jpg');
+    }
+
+    /* Parágrafo de descrição */
+    .description {
+      max-width: 680px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #444444;
+      margin-bottom: 25px;
+    }
+
+    /* Botão estilo clássico */
+    .btn-read-more {
+      display: inline-block;
+      padding: 10px 22px;
+      border: 1px solid #333333;
+      border-radius: 20px;
+      background: transparent;
+      color: #333333;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-family: sans-serif;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-read-more:hover {
+      background-color: #333333;
+      color: #e7c9f1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SPUTNIK -->
+  <section class="section">
+    <h1 class="title-mask sputnik">SPUTNIK</h1>
+    <p class="description">
+      Lançado pela União Soviética em 1957, o Sputnik 1 foi o primeiro satélite artificial da Terra. Ele marcou o início da era espacial e da corrida tecnológica entre as superpotências, demonstrando a viabilidade de colocar objetos em órbita terrestre.
+    </p>
+    <a href="#" class="btn-read-more">Read More</a>
+  </section>
+
+  <!-- HUBBLE -->
+  <section class="section">
+    <h1 class="title-mask hubble">HUBBLE</h1>
+    <p class="description">
+      Lançado em 1990, o Telescópio Espacial Hubble revolucionou a astronomia ao operar acima da atmosfera terrestre. Suas imagens nítidas do universo profundo ajudaram a determinar a taxa de expansão do universo e a idade aproximada do cosmos.
+    </p>
+    <a href="#" class="btn-read-more">Read More</a>
+  </section>
+
+  <!-- JAMES WEBB -->
+  <section class="section">
+    <h1 class="title-mask james-webb">JAMES WEBB</h1>
+    <p class="description">
+      O Telescópio Espacial James Webb (JWST) é o sucessor do Hubble. Projetado para observar no espectro infravermelho, ele consegue enxergar através de nuvens de poeira cósmica e capturar a luz das primeiras galáxias formadas após o Big Bang.
+    </p>
+    <a href="#" class="btn-read-more">Read More</a>
+  </section>
+
+  <!-- VERA RUBIN -->
+  <section class="section">
+    <h1 class="title-mask vera-rubin">VERA RUBIN</h1>
+    <p class="description">
+      O Observatório Vera C. Rubin, localizado no Chile, possui uma das maiores câmeras digitais do mundo. Seu objetivo principal é realizar um levantamento sistemático do céu do hemisfério sul para mapear a matéria escura, energia escura e objetos do Sistema Solar.
+    </p>
+    <a href="#" class="btn-read-more">Read More</a>
+  </section>
+
+  <script>
+    document.querySelectorAll('.btn-read-more').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Carregando mais informações...');
+      });
+    });
+  </script>
+
+</body>
+</html>
